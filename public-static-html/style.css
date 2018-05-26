@@ -41,3 +41,7 @@ body{
 .form__second-column{
   width: 50%;
 }
+
+.form__country__header{
+  margin: 0px;
+}
