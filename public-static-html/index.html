@@ -9,29 +9,29 @@
   </head>
   <body>
     <div class="main">
-    <h1 class="main__header">Настройки легенды</h1>
+    <h1 class="main__header">Опции письма</h1>
     <form class="form" action="to-do" merthod="get">
          <fieldset class="form__roles">
-            <legend class="form__roles__legend">Роль:</legend>
+            <legend class="form__roles__legend">Родственник:</legend>
             <ul class="form__roles__list">
               <li class="form__roles__option">
-                <input class="form__roles__option_radio" type="radio" name="roles" id="role1" checked>
-                <label class="form__roles__option__label_radio" for="role1">Роль1</label>
+                <input class="form__roles__option_radio" type="radio" name="roles" id="father" checked>
+                <label class="form__roles__option__label_radio" for="father">Отец</label>
               </li>
 
               <li class="form__roles__option">
-                <input class="form__roles__option_radio" type="radio" name="roles" id="role2">
-                <label class="form__roles__option__label_radio" for="role2">Роль2</label>
+                <input class="form__roles__option_radio" type="radio" name="roles" id="brother">
+                <label class="form__roles__option__label_radio" for="brother">Брат</label>
               </li>
 
               <li class="form__roles__option">
-                <input class="form__roles__option_radio" type="radio" name="roles" id="role3">
-                <label class="form__roles__option__label_radio" for="role3">Роль3</label>
+                <input class="form__roles__option_radio" type="radio" name="roles" id="grandma">
+                <label class="form__roles__option__label_radio" for="grandma">Бабушка</label>
               </li>
 
               <li class="form__roles__option">
-                <input class="form__roles__option_radio" type="radio" name="roles" id="role4">
-                <label class="form__roles__option__label_radio" for="role4">Роль4</label>
+                <input class="form__roles__option_radio" type="radio" name="roles" id="uncle">
+                <label class="form__roles__option__label_radio" for="uncle">Дядя</label>
             </li>
           </ul>
         </fieldset>
@@ -42,16 +42,16 @@
           <legend class="form__legacy">Наследство:</legend>
           <ul class="form__legacy__list">
             <li class="form__legacy__option">
-              <input class="form__legacy_checkbox" type="checkbox" name="slider" id="checkbox1" checked>
-              <label class="filter__form__option__label_checkbox" for="checkbox1">checkbox1</label>
+              <input class="form__legacy_checkbox" type="checkbox" name="property" id="property" checked>
+              <label class="filter__form__option__label_checkbox" for="property">Недвижимость</label>
             </li>
             <li class="form__legacy__option">
-              <input class="form__legacy_checkbox" type="checkbox" name="slider" id="checkbox2" checked>
-              <label class="filter__form__option__label_checkbox" for="checkbox2">checkbox2</label>
+              <input class="form__legacy_checkbox" type="checkbox" name="land" id="land" checked>
+              <label class="filter__form__option__label_checkbox" for="land">Земля</label>
             </li>
             <li class="form__legacy__option">
-              <input class="form__legacy_checkbox" type="checkbox" name="slider" id="checkbox3" checked>
-              <label class="filter__form__option__label_checkbox" for="checkbox3">checkbox3</label>
+              <input class="form__legacy_checkbox" type="checkbox" name="summ" id="summ" checked>
+              <label class="filter__form__option__label_checkbox" for="summ">Сумма</label>
             </li>
           </ul>
         </fieldset>
@@ -60,10 +60,10 @@
 
         <div class="form__accept">
           <input class="form__accept_checkbox" type="checkbox" name="slider" id="accept" checked>
-          <label class="form__accept__label_checkbox" for="accept">accept</label>
+          <label class="form__accept__label_checkbox" for="accept">Осознаю греховность поступка</label>
         </div>
 
-        <button type="submit" class="form__button">Показать</button>
+        <button type="submit" class="form__button">Сгенерировать письмо</button>
 
       </div>
     </form>

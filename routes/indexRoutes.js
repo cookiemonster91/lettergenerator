@@ -3,7 +3,7 @@
 const express = require('express');
 const router = express.Router();
 const knex = require('../db/knex');
-var kladrJson = require('../kladr.json');
+//var kladrJson = require('../kladr.json');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -15,9 +15,9 @@ router.get('/search/:value', function(req, res) {
   var responseObject = {message: 'set '+value+' letter'};
   res.send(responseObject);
 });
-
+/*
 router.get('/kladr', function(req, res, next) {
   res.json(kladrJson);
-});
+});*/
 
 module.exports = router;
