@@ -17,6 +17,11 @@ body{
   display: flex;
 }
 
+.form__roles__legend,
+.form__country__header{
+  font-size: 18px;
+}
+
 .form__roles__legend{
   margin-bottom: 10px;
 }
@@ -26,8 +31,12 @@ body{
   border: none;
 }
 
-.form__country{
+.form__country__select{
   max-height: 30px;
+}
+
+.form__country{
+  margin-bottom: 30px;
 }
 
 .form__legacy__list,
@@ -37,11 +46,25 @@ body{
   padding: 0px;
 }
 
+.form__roles__option{
+  margin-bottom: 10px;
+}
+
+.form__roles__option__label_radio{
+  line-height: 25px;
+}
+
+.form__legacy{
+  padding-left: 0px;
+}
+
 .form__roles,
 .form__second-column{
   width: 50%;
 }
 
 .form__country__header{
-  margin: 0px;
+  margin: 0px 0px 10px;
+  line-height: 20px;
+  font-weight: 300;
 }
