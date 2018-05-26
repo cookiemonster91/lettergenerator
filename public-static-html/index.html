@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Generator</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
   </head>
   <body>
@@ -16,7 +15,7 @@
             <legend class="form__roles__legend">Родственник:</legend>
             <ul class="form__roles__list">
               <li class="form__roles__option">
-                <input class="form__roles__option_radio" type="radio" name="roles" id="father" checked>
+                <input class="form__roles__option_radio" type="radio" name="roles" id="father" selected>
                 <label class="form__roles__option__label_radio" for="father">Отец</label>
               </li>
 
@@ -38,12 +37,14 @@
         </fieldset>
 
         <div class="form__second-column">
-        <select class="form__country">
-            <option selected class="form__country__option" value="Австрия">Австрия</option>
-            <option class="form__country__option" value="Республика Ломо">Республика Ломо</option>
-            <option class="form__country__option" value="Бразилия">Бразилия</option>
-        </select>
-          <!--combobox-->
+          <div class="form__country">
+            <h2 class="form__country__header">Страна:</h2>
+            <select class="form__country__select">
+              <option class="form__country__option" value="Австрия" id='australia'>Австрия</option>
+              <option class="form__country__option" value="Республика Ломо" id='lomo'>Республика Ломо</option>
+              <option class="form__country__option" value="Бразилия" id='brazil'>Бразилия</option>
+            </select>
+          </div>
 
         <fieldset class="form__legacy">
           <legend class="form__legacy">Наследство:</legend>
@@ -63,12 +64,12 @@
           </ul>
         </fieldset>
 
-      </div>
+        </div>
       </div>
           <!--бегунок-->
 
         <div class="form__accept">
-          <input class="form__accept_checkbox" type="checkbox" name="slider" id="accept" checked>
+          <input class="form__accept_checkbox" type="checkbox" name="accept" id="accept" checked>
           <label class="form__accept__label_checkbox" for="accept">Осознаю греховность поступка</label>
         </div>
 
