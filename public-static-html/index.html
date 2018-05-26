@@ -5,12 +5,13 @@
     <title>Generator</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
   </head>
   <body>
     <div class="main">
     <h1 class="main__header">Опции письма</h1>
     <form class="form" action="to-do" merthod="get">
+      <div class="form_first-row">
          <fieldset class="form__roles">
             <legend class="form__roles__legend">Родственник:</legend>
             <ul class="form__roles__list">
@@ -36,6 +37,12 @@
           </ul>
         </fieldset>
 
+        <div class="form__second-column">
+        <select class="form__country">
+            <option selected class="form__country__option" value="Австрия">Австрия</option>
+            <option class="form__country__option" value="Республика Ломо">Республика Ломо</option>
+            <option class="form__country__option" value="Бразилия">Бразилия</option>
+        </select>
           <!--combobox-->
 
         <fieldset class="form__legacy">
@@ -56,6 +63,8 @@
           </ul>
         </fieldset>
 
+      </div>
+      </div>
           <!--бегунок-->
 
         <div class="form__accept">
@@ -65,10 +74,9 @@
 
         <button type="submit" class="form__button">Сгенерировать письмо</button>
 
-      </div>
-    </form>
+      </form>
 
-    <div class="main__output">
+      <div class="main__output">
       <textarea></textarea>
     </div>
     </div>
