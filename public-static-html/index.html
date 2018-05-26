@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Generator</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main">
+    <h1 class="main__header">Настройки легенды</h1>
+    <form class="form" action="to-do" merthod="get">
+         <fieldset class="form__roles">
+            <legend class="form__roles__legend">Роль:</legend>
+            <ul class="form__roles__list">
+              <li class="form__roles__option">
+                <input class="form__roles__option_radio" type="radio" name="roles" id="role1" checked>
+                <label class="form__roles__option__label_radio" for="role1">Роль1</label>
+              </li>
+
+              <li class="form__roles__option">
+                <input class="form__roles__option_radio" type="radio" name="roles" id="role2">
+                <label class="form__roles__option__label_radio" for="role2">Роль2</label>
+              </li>
+
+              <li class="form__roles__option">
+                <input class="form__roles__option_radio" type="radio" name="roles" id="role3">
+                <label class="form__roles__option__label_radio" for="role3">Роль3</label>
+              </li>
+
+              <li class="form__roles__option">
+                <input class="form__roles__option_radio" type="radio" name="roles" id="role4">
+                <label class="form__roles__option__label_radio" for="role4">Роль4</label>
+            </li>
+          </ul>
+        </fieldset>
+
+          <!--combobox-->
+
+        <fieldset class="form__legacy">
+          <legend class="form__legacy">Наследство:</legend>
+          <ul class="form__legacy__list">
+            <li class="form__legacy__option">
+              <input class="form__legacy_checkbox" type="checkbox" name="slider" id="checkbox1" checked>
+              <label class="filter__form__option__label_checkbox" for="checkbox1">checkbox1</label>
+            </li>
+            <li class="form__legacy__option">
+              <input class="form__legacy_checkbox" type="checkbox" name="slider" id="checkbox2" checked>
+              <label class="filter__form__option__label_checkbox" for="checkbox2">checkbox2</label>
+            </li>
+            <li class="form__legacy__option">
+              <input class="form__legacy_checkbox" type="checkbox" name="slider" id="checkbox3" checked>
+              <label class="filter__form__option__label_checkbox" for="checkbox3">checkbox3</label>
+            </li>
+          </ul>
+        </fieldset>
+
+          <!--бегунок-->
+
+        <div class="form__accept">
+          <input class="form__accept_checkbox" type="checkbox" name="slider" id="accept" checked>
+          <label class="form__accept__label_checkbox" for="accept">accept</label>
+        </div>
+
+        <button type="submit" class="form__button">Показать</button>
+
+      </div>
+    </form>
+
+    <div class="main__output">
+      <textarea></textarea>
+    </div>
+    </div>
+  </body>
+</html>
