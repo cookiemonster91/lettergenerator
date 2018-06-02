@@ -59,13 +59,20 @@
             <li class="form__legacy__option">
               <input class="form__legacy_checkbox" type="checkbox" name="summ" id="summ" checked>
               <label class="filter__form__option__label_checkbox" for="summ">Сумма</label>
+
             </li>
+            <input class="form__legacy_range" type="range" min="0" max="1000000" step="23" value="50000" list="legacy_range" onchange="document.getElementById('legacy_value').innerHTML = this.value;">
+          <!--  <datalist id="legacy_range">
+            <option value="0" label="0">
+            <option value="1000000" label="1000000$">
+            </datalist>/ -->
+            <span id="legacy_value">50000</span>
           </ul>
         </fieldset>
 
       </div>
       </div>
-          <!--бегунок-->
+
 
         <div class="form__accept">
           <input class="form__accept_checkbox" type="checkbox" name="slider" id="accept" checked>
