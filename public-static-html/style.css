@@ -13,8 +13,17 @@ body{
   margin: auto;
 }
 
+.form{
+  margin-bottom: 15px;
+  border: 1px solid rgb(231,231,231);
+  border-radius: 4px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 .form_first-row{
   display: flex;
+  margin-bottom: 25px;
 }
 
 .form__roles__legend,
@@ -67,4 +76,70 @@ body{
   margin: 0px 0px 10px;
   line-height: 20px;
   font-weight: 300;
+}
+
+.form__accept_checkbox{
+    margin: 0;
+}
+
+.form__accept{
+  margin-bottom: 15px;
+}
+
+.form__button{
+    display: block;
+    margin: auto;
+    outline: none;
+    border: none;
+    background-color: rgb(129,179,210);
+    min-height: 50px;
+    min-width: 60%;
+    color: rgb(255,255,255);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 800;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.form__button:hover,
+.form__button:active{
+  background-color: rgb(102,158,192);
+}
+
+.form__button:active:active{
+  background-color: rgb(84,150,189);
+  color: rgba(255,255,255,0.3);
+}
+
+.form__accept{
+  width: 45%;
+  margin: auto;
+}
+
+.form__accept__label_checkbox{
+  font-size: 13px;
+}
+
+@keyframes error-animation {
+  10%,
+  50%{
+    color: red;
+    font-weight: 800;
+  }
+
+  30%,
+  70%{
+    font-weight: 400;
+  }
+
+  100%{
+    color: black;
+    font-weight: 400;
+  }
+}
+
+.validation_error{
+  animation: error-animation 1s;
 }
