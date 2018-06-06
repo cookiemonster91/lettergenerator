@@ -15,22 +15,22 @@
             <legend class="form__roles__legend">Родственник:</legend>
             <ul class="form__roles__list">
               <li class="form__roles__option">
-                <input class="form__roles__option_radio" type="radio" name="roles" id="father" selected>
+                <input class="form__roles__option_radio" type="radio" name="roles" value="father" id="father" checked>
                 <label class="form__roles__option__label_radio" for="father">Отец</label>
               </li>
 
               <li class="form__roles__option">
-                <input class="form__roles__option_radio" type="radio" name="roles" id="brother">
+                <input class="form__roles__option_radio" type="radio" name="roles" value="brother" id="brother">
                 <label class="form__roles__option__label_radio" for="brother">Брат</label>
               </li>
 
               <li class="form__roles__option">
-                <input class="form__roles__option_radio" type="radio" name="roles" id="grandma">
+                <input class="form__roles__option_radio" type="radio" name="roles" value="grandma" id="grandma">
                 <label class="form__roles__option__label_radio" for="grandma">Бабушка</label>
               </li>
 
               <li class="form__roles__option">
-                <input class="form__roles__option_radio" type="radio" name="roles" id="uncle">
+                <input class="form__roles__option_radio" type="radio" name="roles" value="uncle" id="uncle">
                 <label class="form__roles__option__label_radio" for="uncle">Дядя</label>
             </li>
           </ul>
@@ -39,10 +39,10 @@
         <div class="form__second-column">
           <div class="form__country">
             <h2 class="form__country__header">Страна:</h2>
-            <select class="form__country__select">
-              <option class="form__country__option" value="Австрия" id='australia'>Австрия</option>
-              <option class="form__country__option" value="Республика Ломо" id='lomo'>Республика Ломо</option>
-              <option class="form__country__option" value="Бразилия" id='brazil'>Бразилия</option>
+            <select class="form__country__select" name="country">
+              <option class="form__country__option" value="australia">Австрия</option>
+              <option class="form__country__option" value="lomo">Республика Ломо</option>
+              <option class="form__country__option" value="brazil">Бразилия</option>
             </select>
           </div>
 
@@ -60,32 +60,50 @@
             <li class="form__legacy__option">
               <input class="form__legacy_checkbox" type="checkbox" name="summ" id="summ" checked>
               <label class="filter__form__option__label_checkbox" for="summ">Сумма</label>
-
             </li>
-            <input class="form__legacy_range" type="range" min="0" max="1000000" step="23" value="50000" list="legacy_range" onchange="document.getElementById('legacy_value').innerHTML = this.value;">
-          <!--  <datalist id="legacy_range">
-            <option value="0" label="0">
-            <option value="1000000" label="1000000$">
-            </datalist>/ -->
-            <span id="legacy_value">50000</span>
           </ul>
         </fieldset>
 
+        <div class="form__legacySum">
+          <input class="form__legacySum__range" type="range" min="0" max="1000000" step="23" value="50000" list="legacy_range" onchange="document.getElementById('legacy_value').innerHTML = this.value;">
+          <input class="form__legacySum__input" id="legacy_value" value="50000" name="Sum">
         </div>
       </div>
+    </div>
 
+      <button type="submit" class="form__button">Сгенерировать письмо</button>
 
-        <div class="form__accept">
-          <input class="form__accept_checkbox" type="checkbox" name="accept" id="accept" checked>
-          <label class="form__accept__label_checkbox" for="accept">Осознаю греховность поступка</label>
-        </div>
-
-        <button type="submit" class="form__button">Сгенерировать письмо</button>
+      <div class="form__accept">
+        <input class="form__accept_checkbox" type="checkbox" name="accept" id="accept">
+        <label class="form__accept__label_checkbox" for="accept">Осознаю греховность поступка</label>
+      </div>
 
       </form>
 
       <div class="main__output">
       <textarea></textarea>
+      <script>
+        let form = document.querySelector('.form');
+
+        let checkboxState = document.getElementById('accept');
+
+        let checkboxText = document.querySelector('.form__accept__label_checkbox');
+
+        let getLetterButton = document.querySelector('.form__button');
+
+        form.addEventListener('submit',function(evt){
+          checkboxText.classList.remove('validation_error');
+           if(checkboxState.checked===false){
+              evt.preventDefault();
+              console.log('not valid');
+              console.log(checkboxText.classList);
+              checkboxText.classList.add('validation_error');
+            }if(checkboxState.checked===true){
+              evt.preventDefault();
+            }
+        });
+
+      </script>
     </div>
     </div>
   </body>
